@@ -1,0 +1,7 @@
+select disk 13
+clean
+convert gpt
+create partition primary
+format quick fs=ntfs label=KINGSTON
+assign letter=T
+exit

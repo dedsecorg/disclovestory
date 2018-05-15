@@ -1,0 +1,5 @@
+select disk 1
+select partition 1
+select volume 4
+remove all dismount
+exit
