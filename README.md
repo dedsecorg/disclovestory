@@ -1,5 +1,5 @@
 # disclovestory
-A batchscript that was mainly made ICT school use. It is used to format a disc, put some files in it, put in a new disc, and loop it over and over. #vote for no manual booring work at ICT
+A batchscript that was mainly made at ICT for school use. It is used to format a disc, put some files in it, put in a new disc, and loop it over and over. #vote for no manual booring work at ICT
 
 
 This script has NO WARRANTY! If you lose some files by using this script there is a possibility that you CANNOT recover them.
@@ -22,3 +22,5 @@ The use is primarly for automaticly formating a USB flash drive, and putting som
 5. Repeat? Yes or no.
 
 Install file are not working yet.
+
+PS: Disc number two is the favourite of the tool because of the volume and dismount possibility!
