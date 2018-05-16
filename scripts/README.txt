@@ -16,3 +16,5 @@ The use is primarly for automaticly formating a USB flash drive, and putting som
 3. Chose if you wanna read help lines (this document).
 4. Select disk number.
 5. Repeat? Yes or no.
+
+Install file will not work yet.
