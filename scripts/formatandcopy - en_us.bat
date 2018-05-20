@@ -20,9 +20,9 @@ IF %ERRORLEVEL%==1 goto c
 IF %ERRORLEVEL%==2 goto a
 
 :a
-diskpart /s "c:\scripts\sys\listdisk.txt"
+diskpart /s "%programfiles%\sys\listdisk.txt"
 echo.
-SET /P disknr= "Which disc do you wanna delete and replace with files?: 
+SET /P disknr= "Which disc do you wanna delete and replace with files?:
 echo.
 echo YOU KISSED DISC: %disknr%
 pause
@@ -31,7 +31,7 @@ goto b
 goto b
 
 :b
-diskpart /s "c:\scripts\sys\part1\%disknr%.txt"
+diskpart /s "%programfiles%\sys\part1\%disknr%.txt"
 echo Now we fucked up your disc, sorry. T:\
 xcopy /s "c:\scripts\files" "T:\"
 echo Now you have to move togheter (ONE NIGHT STAND) AKA Copying shit to disc.

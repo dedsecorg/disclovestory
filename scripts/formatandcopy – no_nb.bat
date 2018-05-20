@@ -25,7 +25,7 @@ IF %ERRORLEVEL%==2 goto a
 :a
 diskpart /s "%ProgramFiles%\discolovestory\sys\listdisk.txt"
 echo.
-SET /P disknr= "Hvilken disk vil du legge eksamensnettleseren i?: 
+SET /P disknr= "Hvilken disk vil du legge eksamensnettleseren i?:
 echo.
 echo Du har valgt disk nummer: %disknr%
 pause
@@ -47,7 +47,7 @@ echo.
 pause
 cls
 echo Da er det gjort.
-goto :l 
+goto :l
 
 rundll32.exe cmdext.dll,MessageBeepStub
 :m
