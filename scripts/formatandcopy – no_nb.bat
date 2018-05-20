@@ -55,7 +55,7 @@ rundll32.exe cmdext.dll,MessageBeepStub
 goto :l
 :l
 cls
-set /p again= "Vil du gjøre det samme på en ny disk (y), bytte noen instillinger (c) eller stikke (n)?: "
+set /p again= "Vil du gj›re det samme på en ny disk (y), bytte noen instillinger (c) eller stikke (n)?: "
 If %errorlevel%==1 goto :m
 If %again%==Y goto :b
 If %again%==y goto :b
