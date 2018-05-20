@@ -1,9 +1,9 @@
 @echo off
-æ = ‘
+Ã¦ = â€˜
 cls
-ø = ›
+Ã¸ = â€º
 cls
-å = †
+Ã¥ = â€ 
 cls
 if not "%1"=="am_admin" (powershell start -verb runas '%0' am_admin & exit)
 cls
@@ -78,4 +78,3 @@ goto a
 echo Ha en fin dag.
 Made by Glenn Mesel, Oppland Fylkeskommune
 TIMEOUT /T 10
-pause
