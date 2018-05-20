@@ -33,9 +33,9 @@ goto b
 :b
 diskpart /s "%programfiles%\sys\part1\%disknr%.txt"
 echo Now we fucked up your disc, sorry. T:\
-xcopy /s "c:\scripts\files" "T:\"
+xcopy /s "%programfiles%\files" "T:\"
 echo Now you have to move togheter (ONE NIGHT STAND) AKA Copying shit to disc.
-diskpart /s c:\scripts\sys\part2\2.txt
+diskpart /s %programfiles%\sys\part2\2.txt
 
 echo.
 echo.
@@ -59,7 +59,7 @@ echo.
 echo.
 echo HELPEFILE/FAQ
 echo.
-type C:\scripts\sys\README.txt
+type %programfiles%\sys\README.txt
 echo.
 echo.
 pause
