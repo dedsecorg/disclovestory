@@ -21,3 +21,9 @@ REG ADD HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\D
 REG ADD HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\DiscLovestory /v InstallLocation /t REG_SZ /d "%programfiles%\DiscLovestory"
 REG ADD HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\DiscLovestory /v UninstallString /t REG_SZ /d "%programfiles%\DiscLovestory\uninstall.bat"
 REG ADD HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\DiscLovestory /v Publisher /t REG_SZ /d "Glenn Mesel"
+choice /m "Do you wanna hace a shortcut at the desktop?"
+if ERRORLEVEL==1 echo yes
+if ERRORLEVEL==2 goto b
+:b
+REM mklink "%programfiles%/DiscLovestory/formatandcopy – en_us.bat" "%USERPROFILE%/Desktop/formatandcopy – en_us"
+REM mklink "%programfiles%/DiscLovestory/formatandcopy – no_nb.bat" "%USERPROFILE%/Desktop/formatandcopy – no_nb"
