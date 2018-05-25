@@ -63,7 +63,7 @@ If %again%==N goto :exit
 If %again%==n goto :exit
 If %again%==C goto :a
 If %again%==c goto :a
-
+If %again%?=="" goto :b
 
 )
 
@@ -74,7 +74,7 @@ echo.
 echo.
 echo HJELPEFIL/FAQ
 echo.
-type %ProgramFiles%\discolovestory\sys\README.txt
+type "%ProgramFiles%\DiscoLovestory\sys\README.txt"
 echo.
 echo.
 pause
