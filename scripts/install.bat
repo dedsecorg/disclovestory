@@ -12,8 +12,9 @@ mkdir "%programfiles%\DiscLovestory"
 xcopy "%~dp0..\scripts" "%programfiles%\DiscLovestory" /s
 echo.
 echo.
-xcopy "%~dp0\disclovestory\scripts\sys\shortcuts\formatandcopy - en_us.bat - Snarvei" "%USERPROFILE%\Desktop\"
-xcopy "%~dp0\disclovestory\scripts\sys\shortcuts\" "%USERPROFILE%\Desktop\"
+PowerShell -NoProfile -ExecutionPolicy Bypass -Command "& $env:programfiles\DiscLovestory\sys\update\update_list.ps1
+REM xcopy "%~dp0\disclovestory\scripts\sys\shortcuts\formatandcopy - en_us.bat - Snarvei" "%USERPROFILE%\Desktop\"
+REM xcopy "%~dp0\disclovestory\scripts\sys\shortcuts\" "%USERPROFILE%\Desktop\"
 echo.
 echo.
 
@@ -22,6 +23,10 @@ REG ADD HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\D
 REG ADD HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\DiscLovestory /v InstallLocation /t REG_SZ /d "%programfiles%\DiscLovestory"
 REG ADD HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\DiscLovestory /v UninstallString /t REG_SZ /d "%programfiles%\DiscLovestory\uninstall.bat"
 REG ADD HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\DiscLovestory /v Publisher /t REG_SZ /d "Glenn Mesel"
+cls
+echo.
+echo.
+echo.
 choice /m "Do you wanna make a shortcut at the desktop (not working yet)?"
 if %ERRORLEVEL%==1 goto g
 if %ERRORLEVEL%==2 goto g
@@ -33,12 +38,16 @@ REM mklink "%programfiles%/DiscLovestory/formatandcopy – no_nb.bat" "%USERPROF
 REM This is for a later version:
 
 :g
-choice /m "Do you wanna read the update log?"
+cls
+echo.
+echo.
+echo.
+echo Do you wanna read the update log?
+choice /m  "(PS: this is messy as it is the commit log from github, its better to open with notepad++)?"
 if %ERRORLEVEL%==1 goto c
 if %ERRORLEVEL%==2 goto d
 :c
-type "%programfiles%\DiscLovestory\sys\updates\git_commit.log"
-pause
+start notepad "%programfiles%\DiscLovestory\sys\update\git_commit.log"
 :d
 cls
 echo Support this project with sharing as "sharing is caring", feel free to come with suggestions, really, i will think about it and come with ideas.
