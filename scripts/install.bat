@@ -7,17 +7,18 @@ if not "%1"=="am_admin" (powershell start -verb runas '%0' am_admin & exit)
 rd /q /s "%programfiles%\DiscLovestory"
 REG DELETE HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\DiscLovestory /f
 cls
-echo Installing DiscLovestory
+echo Making programfiles directory for DiscLovestory
 mkdir "%programfiles%\DiscLovestory"
 xcopy "%~dp0..\scripts" "%programfiles%\DiscLovestory" /s
 echo.
 echo.
-PowerShell -NoProfile -ExecutionPolicy Bypass -Command "& $env:programfiles\DiscLovestory\sys\update\update_list.ps1
-REM xcopy "%~dp0\disclovestory\scripts\sys\shortcuts\formatandcopy - en_us.bat - Snarvei" "%USERPROFILE%\Desktop\"
-REM xcopy "%~dp0\disclovestory\scripts\sys\shortcuts\" "%USERPROFILE%\Desktop\"
-echo.
-echo.
 
+echo Downloading git_commit.log file to check versions and so you have something to read!
+PowerShell -NoProfile -ExecutionPolicy Bypass -Command "& $env:programfiles\DiscLovestory\sys\update\update_list.ps1
+
+echo.
+echo.
+echo Editing Regedit
 REG ADD HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\DiscLovestory
 REG ADD HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\DiscLovestory /v DisplayName /t REG_SZ /d DiscLovestory /f
 REG ADD HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\DiscLovestory /v InstallLocation /t REG_SZ /d "%programfiles%\DiscLovestory"
@@ -30,16 +31,12 @@ echo.
 choice /m "Do you wanna make a shortcut at the desktop?"
 if %ERRORLEVEL%==1 goto b
 if %ERRORLEVEL%==2 goto g
-REM ^need change when update is done^
 :b
-REM if exist "%USERPROFILE%\Desktop\DiscLovestory en_us.ink" del "%USERPROFILE%\Desktop\DiscLovestory en_us.ink"
-REM if exist "%USERPROFILE%\Desktop\DiscLovestory no_nb.ink" del "%USERPROFILE%\Desktop\DiscLovestory no_nb.ink"
-del "%USERPROFILE%\Desktop\DiscLovestory en_us.lnk"
-del "%USERPROFILE%\Desktop\DiscLovestory no_nb.lnk"
+PowerShell -NoProfile -ExecutionPolicy Bypass -Command "& $env:programfiles\DiscLovestory\sys\update\shortcut_remover.ps1
+pause
 call "%programfiles%\DiscLovestory\sys\update\shortcut_en.bat"
 call "%programfiles%\DiscLovestory\sys\update\shortcut_no.bat"
 pause
-REM This is for a later version:
 goto g
 :g
 cls
