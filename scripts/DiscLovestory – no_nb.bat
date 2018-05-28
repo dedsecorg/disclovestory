@@ -25,7 +25,7 @@ IF %ERRORLEVEL%==2 goto a
 :a
 diskpart /s "%ProgramFiles%\discolovestory\sys\listdisk.txt"
 echo.
-SET /P disknr= "Hvilken disk vil du legge eksamensnettleseren i?:
+SET /P disknr= "Hvilken disk vil du legge filene i?:
 echo.
 echo Du har valgt disk nummer: %disknr%
 pause
@@ -38,7 +38,7 @@ goto b
 diskpart /s "%ProgramFiles%\discolovestory\sys\part1\%disknr%.txt"
 echo Da har vi lagd en partisjon og satt denne til bokstaven T:\
 xcopy /s "%ProgramFiles%\discolovestory\files" "T:\"
-echo Kopierer over nettleseren til minnebrikka
+echo Kopierer over filene til minnebrikka
 diskpart /s %ProgramFiles%\discolovestory\sys\part2\2.txt
 
 echo.
