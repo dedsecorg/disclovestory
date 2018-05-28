@@ -3,6 +3,7 @@ rename version.log oldversion.log
 PowerShell -NoProfile -ExecutionPolicy Bypass -Command "& $env:programfiles\DiscLovestory\sys\update\update_list.ps1
 cd %programfiles%\DiscLovestory\sys\update\
 count.exe git_commit.log parents>version.log
+fc oldversion.log version.log
 if %ERRORLEVEL% == 0 goto a
 if %ERRORLEVEL% == 1 goto b
 :a
