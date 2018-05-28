@@ -10,8 +10,9 @@ if %ERRORLEVEL% == 1 goto b
 echo updating
 PowerShell -NoProfile -ExecutionPolicy Bypass -Command "& $env:programfiles\DiscLovestory\sys\update\update_list.
 %temp%\Disclovestory\unzip\disclovestory-master\scripts\install.bat
-
+pause
 
 
 :b
 echo no need for update, see ya later!
+pause
