@@ -4,7 +4,6 @@ A batchscript that was mainly made for utility for use at ICT for school use, bu
 
 This script has NO WARRANTY! If you lose some files by using this script there is a possibility that you CANNOT recover them.
 
-This script is also written in Norwegian (translators, be my guest), so if you do not speak norwegian, i'd preffer not to use it.
 
 Well, that was the nonsense.
 
@@ -21,6 +20,6 @@ The use is primarly for automaticly formating a USB flash drive, and putting som
 4. Select disk number.
 5. Repeat? Yes or no.
 
-Install file are working, but there is no shortcuts yet (option is there but it will not make any shortcuts yet, really, i don't know how to do it yet. will work on it, promise.).
+Install file are working.
 
 PS: Disc number two is the favourite of the tool because of the volume and dismount possibility!
