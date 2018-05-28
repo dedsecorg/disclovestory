@@ -1,0 +1,28 @@
+/* THIS IS FOR THE OPEN SOURCE PART. THIS FILE IS NOT IN USE. THIS IS THE CONTENT OF THE COUNT.EXE. *\ 
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#define LINESZ 1024
+
+int main(int argc, char **argv)
+{
+    if(argc < 3){
+        printf("Usage: count.exe <stack> <needle>\n");
+        exit(0);
+    }
+    char* stack = argv[1];
+    char* needle = argv[2];
+    int count = 0;
+    char buff[LINESZ];
+    FILE *fin = fopen (stack, "r");
+    if (fin != NULL) {
+        while (fgets (buff, LINESZ, fin)) {
+            if(strstr(buff,needle)){
+                count += 1;
+            }
+        }
+        fclose (fin);
+    }
+    printf("%d\n",count);
+}
