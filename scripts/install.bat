@@ -27,16 +27,20 @@ cls
 echo.
 echo.
 echo.
-choice /m "Do you wanna make a shortcut at the desktop (not working yet)?"
-if %ERRORLEVEL%==1 goto g
+choice /m "Do you wanna make a shortcut at the desktop?"
+if %ERRORLEVEL%==1 goto b
 if %ERRORLEVEL%==2 goto g
 REM ^need change when update is done^
 :b
-REM mklink "%programfiles%/DiscLovestory/formatandcopy – en_us.bat" "%USERPROFILE%/Desktop/formatandcopy – en_us"
-REM mklink "%programfiles%/DiscLovestory/formatandcopy – no_nb.bat" "%USERPROFILE%/Desktop/formatandcopy – no_nb"
-
+REM if exist "%USERPROFILE%\Desktop\DiscLovestory en_us.ink" del "%USERPROFILE%\Desktop\DiscLovestory en_us.ink"
+REM if exist "%USERPROFILE%\Desktop\DiscLovestory no_nb.ink" del "%USERPROFILE%\Desktop\DiscLovestory no_nb.ink"
+del "%USERPROFILE%\Desktop\DiscLovestory en_us.lnk"
+del "%USERPROFILE%\Desktop\DiscLovestory no_nb.lnk"
+call "%programfiles%\DiscLovestory\sys\update\shortcut_en.bat"
+call "%programfiles%\DiscLovestory\sys\update\shortcut_no.bat"
+pause
 REM This is for a later version:
-
+goto g
 :g
 cls
 echo.
