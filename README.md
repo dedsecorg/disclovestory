@@ -15,12 +15,12 @@ The use is primarly for automaticly formating a USB flash drive, and putting som
 
 --Tutorial --
 
-1. Put files you wanna transfer in files.
-2. Use formatandcopy.bat file to start.
-3. Chose if you wanna read help lines (this document).
+1. Put files you wanna transfer in /files.
+2. Use DiscLovestory - **_**.bat file to start, the english version is a "funny" story, and the norwegian story is more "serious" as this project is made for my work at Oppland County Council.
+3. Choose if you wanna read help lines (more or less, this document).
 4. Select disk number.
 5. Repeat? Yes or no.
 
-Install file are not working yet.
+Install file are working, but there is no shortcuts yet (option is there but it will not make any shortcuts yet, really, i don't know how to do it yet. will work on it, promise.).
 
 PS: Disc number two is the favourite of the tool because of the volume and dismount possibility!
