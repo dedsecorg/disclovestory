@@ -1,5 +1,5 @@
 # disclovestory
-A batchscript that was mainly made at ICT for school use. It is used to format a disc, put some files in it, put in a new disc, and loop it over and over. #vote for no manual booring work at ICT
+A batchscript that was mainly made for utility for use at ICT for school use, but can be used anywhere it will "fit". It is used to format a disc, put some files in it, put in a new disc, and loop it over and over. #vote for no manual booring work at ICT
 
 
 This script has NO WARRANTY! If you lose some files by using this script there is a possibility that you CANNOT recover them.

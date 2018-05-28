@@ -20,6 +20,7 @@ IF %ERRORLEVEL%==1 goto c
 IF %ERRORLEVEL%==2 goto a
 
 :a
+
 diskpart /s "%programfiles%\sys\listdisk.txt"
 echo.
 SET /P disknr= "Which disc do you wanna delete and replace with files?:
