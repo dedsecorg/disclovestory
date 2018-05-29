@@ -1,8 +1,6 @@
 Remove-Item –path $env:temp\Disclovestory –recurse
-timeout -t 2
 mkdir $env:temp\Disclovestory
 cd $env:temp\Disclovestory
-
 $FileName = "DiscLovestory-master.zip"
 if (Test-Path $FileName)
 {
