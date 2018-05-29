@@ -9,8 +9,8 @@ if %ERRORLEVEL% == 1 goto b
 :a
 echo updating
 PowerShell -NoProfile -ExecutionPolicy Bypass -Command "& $env:programfiles\DiscLovestory\sys\update\update_list.
-%temp%\Disclovestory\unzip\disclovestory-master\scripts\install.bat
-pause
+call "%temp%\Disclovestory\unzip\disclovestory-master\scripts\install.bat"
+goto b
 
 
 :b
@@ -19,5 +19,6 @@ if %errorlevel% == 1 %ProgramFiles%\DiscLovestory\DiscLovestory - en_us.bat
 if %errorlevel% == 0
 
 echo no need for update, see ya later!
-timeout /t 5
-pause
+echo Have a nice life.
+Made by Glenn Mesel, Oppland Fylkeskommune
+TIMEOUT /T 10
