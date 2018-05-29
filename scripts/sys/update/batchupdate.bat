@@ -15,4 +15,5 @@ pause
 
 :b
 echo no need for update, see ya later!
+timeout /t 5
 pause
