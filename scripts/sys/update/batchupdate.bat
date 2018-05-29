@@ -14,6 +14,10 @@ pause
 
 
 :b
+choice /m do you wanna start the program/script?
+if %errorlevel% == 1 %ProgramFiles%\DiscLovestory\DiscLovestory - en_us.bat
+if %errorlevel% == 0
+
 echo no need for update, see ya later!
 timeout /t 5
 pause
