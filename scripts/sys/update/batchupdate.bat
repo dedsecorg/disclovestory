@@ -19,6 +19,6 @@ if %errorlevel% == 1 %ProgramFiles%\DiscLovestory\DiscLovestory - en_us.bat
 if %errorlevel% == 0
 
 echo no need for update, see ya later!
-echo Have a nice life.
+echo Have a nice day.
 Made by Glenn Mesel, Oppland Fylkeskommune
 TIMEOUT /T 10
