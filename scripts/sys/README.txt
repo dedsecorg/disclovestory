@@ -13,7 +13,7 @@ The use is primarly for automaticly formating a USB flash drive, and putting som
 
 1. Put files you wanna transfer in files.
 2. Use formatandcopy.bat file to start.
-3. Chose if you wanna read help lines (this document).
+3. Choose if you wanna read help lines (this document).
 4. Select disk number. 0-15
 5. Repeat? Yes or no.
 
